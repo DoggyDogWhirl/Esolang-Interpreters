@@ -1,0 +1,20 @@
+Renumbering reassigns values of numbers.
+Thus, what appear to be integer literals are actually variables initialized to integers.
+ (The negative sign is '_'; '_1' is -1.)
+ 
+A = B   Sets A to B.
++-*/%^  Sets A to A?B. (with ? being the chosen operation)
+        (addition, subtraction, multiplication, division, modulo, exponentiation)
+I A     Sets A to the value inputted.
+O A     Outputs A.
+C A     Outputs the character with value A.
+G A     Jumps to command A (unless A < 1, as commands are 1-indexed.)
+
+
+Outputs the prime numbers.
+_1=1 _1+1 
+ _2=1 _2+1
+  _3=_2 _3-_1 _3+1 _3*19 G_3
+  _4=_1 _4%_2 
+  _5=_4 _4*6 _5*2 _5+1 _4/_5 _4+2 G_4
+O_1 C10 G2

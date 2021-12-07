@@ -1,0 +1,47 @@
+Labra uses the symbols ()[]{}<>. All brackets must be correctly matched.
+Code is broken up in lines with newlines.
+
+A pair of brackets takes the result of the previous function and the code inside it.
+Whether these arguments are present or not dictates the function.
+
+Labra uses integers and lists.
+
+ ( )  ONE
+ [ ]  ZERO
+ { }  INPUT, or ARGUMENT of surrounding INDUCTION or MAP
+ < >  PREVIOUS line
+ (X)  SUM
+ [X]  INDICES: [0...X] or [0...length(X)]
+ {X}  REPEAT: [X,X,X,...]
+ <X>  CALL: Result of line X (0-indexed)
+A( )  ADD ONE (appends to lists)
+A[ ]  ENCLOSE: [A]
+A{ }  OUTPUT
+A< >  INVERT: -X if integer. Swaps indexes and items: [4,2] -> [?,?,1,?,0]
+A(X)  ADD (or append)
+A[X]  INDUCTION: sets {} to A, solves X, sets {} to that... -> [A,X(A),X(X(A)),...]
+A{X}  MAP: [X(A1),X(A2),...]
+A<X>  INDEX
+
+Labra only uses numbers as input and output, no ASCII values.
+The result of the last line is implicitly printed, along with any OUTPUTs found along the way.
+
+
+Fibonacci Sequence
+()[]()[{}<()>[](({}))]{{}<()>}
+
+Hello, world!
+[][{}()()()()()()()()()()()()]  0,12,24,...
+<()><()()()()()()>              H
+<()><()()()()()()()>()()()()()  e
+<>()()()()()()(){}              ll  #The l OUTPUTted is the one printed first
+<>()()()                        o
+<()><()()()>()()()()()()()()    ,
+<()><()()>()()()()()()()()
+<()()()()>()()()()()()()()      w
+<()()()()>                      o
+<()()()()>()()()                r
+<()><()()()()()()()()()>()()()  l
+<()><()()()()()()()>()()()()()  d
+<()()()()()()>()                !
+<[<()><()>]{{}()}>

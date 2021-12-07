@@ -1,0 +1,37 @@
+DDR is a Brainfuck extension.
+   >  >
+<     <
+  ^   +
+ v    -
+ v^   .
+<v    ,
+< ^   [
+ v >  ]
+  
+  ^>  Output the value in the cell at the pointer
+<v^   Sets the variable to the value in the cell at the pointer (the variable is set to 0 by default)
+ v^>  Sets the value in the cell at the pointer to the variable
+<  >  The next two commands are never run, and instead converted to a number which stored in the cell at the pointer (e.g. " v >" and " v^>" are converted to 01010111, and stored as 87)
+< ^>  All commands between this command and its next instance are stored as a function and not run
+<v >  Calls the function
+<v^>  Halt the program (And starts the program; first line must be one)
+
+
+
+Code looks like this:
+<v^> #Cat program
+<v
+< ^
+ v^
+<v
+ v >
+
+Though because of the way the interpreter works, it could also look like this:
+^<< >   CAts.   v
+          v . < v
+  ^<<       < ^<<
+  ^   v
+cat ? v<<
+>>>>v   >>>>v
+
+Though that's a secret, don't tell the cops!

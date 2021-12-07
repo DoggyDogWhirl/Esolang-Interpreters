@@ -1,0 +1,35 @@
+Varnand is a language with two operations: variable assignment and NAND.*
+ (*and cyclic left shift)
+
+! _ _  Bitwise NAND
+% _ _	 Cyclic left shift _ by _ bits
+0-F    Hexadecimal value 0-15
+= _ _	 Set variable _ to _
+a-z    Variables, initialized to 0
+I	     Inputs one character
+O _	   Outputs value as a number
+P _	   Prints character with given value
+
+
+Guide to logic gates:
+NOT  !aa
+OR   !!aa!bb
+AND  !!ab!ab
+XOR  !!!!aa!bb!ab!!!aa!bb!ab
+NOR  !!!aa!bb!!aa!bb
+XNOR !!!aa!bb!ab
+
+
+Hello, world!
+P!!%44%44!88
+P!!%64%64!55
+=lPP!!%64%64!CC
+=oP!!%64%64!FF
+P!!%24%24!CC
+P%24
+P!!%74%74!77
+Po
+P!!%74%74!22
+Pl
+P!!%64%64!44
+P!!%24%24!11

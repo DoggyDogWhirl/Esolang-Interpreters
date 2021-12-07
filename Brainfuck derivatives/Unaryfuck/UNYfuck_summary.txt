@@ -1,0 +1,15 @@
+Unary is a binary encoding of Brainfuck.
+>	000
+<	001
++	010
+-	011
+.	100
+,	101
+[	110
+]	111
+010 110 100 010 111 corresponds to +[,+]
+
+Unaryfuck is different: it doesn't split code in threes.
+010110100010111
+  +,-[,+.><+,-]
+This cat program, by User:A, cats every 2nd, 4th, 6th, ... character.

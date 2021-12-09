@@ -1,4 +1,6 @@
-# Two
+# Twobrainsfuck interpreter
+# Original code : https://github.com/pocmo/Python-Brainfuck/blob/master/brainfuck.py
+# Modified by DoggyDogWhirl
 
 code="""code goes here"""
 

@@ -7,6 +7,8 @@ import Data.List
 codeFile = "code.txt"
 userInput = [1]
 
+-- put code in a different file ("code.txt" by default)
+-- user input is a list of numbers
 
 main = do
   rawCode <- readFile codeFile

@@ -14,7 +14,7 @@ main = do
   rawCode <- readFile codeFile
   let code = formatCode rawCode
   let results = Array [evaluate Nothing line resultInput results n | (line, n) <- zip code [0..] ]
-  putStrLn "== Labra Interpreter ==\n==(cannot OUTPUT _{})=="
+  putStrLn "== Labra Interpreter ==\n==(cannot OUTPUT A{})=="
   putStrLn . output . last $ (unarray results)
 
 

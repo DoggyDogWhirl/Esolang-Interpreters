@@ -34,4 +34,4 @@ Though because of the way the interpreter works, it could also look like this:
 cat ? v<<
 >>>>v   >>>>v
 
-Though that's a secret, don't tell the cops!
+But that's a secret, don't tell the cops!

@@ -1,12 +1,12 @@
 Unary is a binary encoding of Brainfuck.
->	000
-<	001
-+	010
--	011
-.	100
-,	101
-[	110
-]	111
+> 000
+< 001
++ 010
+- 011
+. 100
+, 101
+[ 110
+] 111
 010 110 100 010 111 corresponds to +[,+]
 
 Unaryfuck is different: it doesn't split code in threes.

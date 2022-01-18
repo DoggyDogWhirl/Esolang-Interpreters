@@ -1,0 +1,91 @@
+- UNFINISHED - (but close, just needs good examples)
+Hyla and Della are two separate esolangs that can interact, inspired by HTML, CSS, and JS in webpages.
+Della is inspired by Haskell, and Hyla by Python. (Those are the only two languages I know well.)
+Functions in Della can be used in a Hyla program, greatly simplifying their use.
+
+== Della ==
+
+All word functions start with a capital letter.
+Spaces are not necessary.
+
+0      | The number 0
++X     | Increment: Return X+1
+'+     | Sequencer: Allows user-defined symbol functions and the two above to be passed as an argument
+(XYZ   | Bracket: Pass Y,Z.. as arguments to X and return
+XY=Z   | Function: X(Y) = Z. Allows for pattern matching with 0, +, and user-defined symbols.
+=xxxx  | Comment: If no arguments or a full function definition before, the rest of the line is ignored.
+
+Functions take the next items, even if they are functions.
+That is, unless they are symbols (non-alphabetic), which are automatically Bracket-ed.
+
+If there is no Hyla code, Out is given input as an argument and the result is printed.
+If the result is a function, it is run on all valid inputs starting at 0.
+
+Examples:
+
+=2
+2 = ++0
+Out In = 2
+
+=Fibonacci Sequence
+- +X = X
+Add X 0  = X
+Add X +Y = +(Add X Y
+Fib 0  = +0
+Fib +0 = +0
+Fib X  = Add (Fib -X (Fib --X
+Out In = Fib
+
+=Hello, world!
+*X = +++++X
+^X = *****X
+Hello 0      = ^^****++0     = H
+Hello +0     = ^^^^+0        = e
+Hello ++0    = ^^^^*+++0     = l
+Hello +++0   = ^^^^*+++0     = l
+Hello ++++0  = ^^^^**+0      = o
+Hello *0     = ^***++++0     = ,
+Hello *+0    = ^*++0         =  
+Hello *+0    = ^^^^***++++0  = w
+Hello *++0   = ^^^^**+0      = o
+Hello *+++0  = ^^^^**+++0    = r
+Hello *++++0 = ^^^^*+++0     = l
+Hello **0    = ^^^^0         = d
+Hello **+0   = ^*+++0        = !
+Out In = Hello
+
+
+== Hyla ==
+
+Unlike Della, Hyla has variables that can be changed at any time.
+Hyla uses "sequences" instead of functions.
+
+12      | Number: Any positive integer, this is 12
+[1 2]   | Sequence: Secretly a function, can be called (technically, functions are secretly sequences)
+[1..]   |           Can be infinite. This is [1,2,3,4...
+[1 4..] |           This is [1,4,7,10...
+"12"    | String: Secretly a sequence, this is [49, 50]
+X <- Y  | Variable: Set X to Y
+X(Y)    | Call: indexes into sequence X
+
+If X Y  | If X != 0, then do Y
+... ->  | Instead of one Y, do the next tabbed lines 
+-> Y    |   Tab
+X -> Y  | For each in X, do Y
+X->Y -> | For Y in X, do Z
+-> Z    |   Setting the value of Y inside the loop instantly breaks out of it
+< = >   | Less than, Equal to, Greater than
+#xxxx   | Comment
+
+Get     | Returns input as a string
+Input   | Returns input as a number
+Say     | Outputs as a string
+Output  | Outputs as a number
+
+Examples:
+
+#2
+Output(2)
+
+#
+
